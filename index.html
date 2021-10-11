@@ -9,38 +9,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
 </head>
+<header>
+    <h1 id="title" class="title">FreeCodeCamp Survey Form
+    </h1>
+    <p id="description" class="instructions">
+        Please answer the following questions.
+    </p>
+</header>
 
 <body class="body">
     <section class="section">
-        <!--User Story #1-->
-        <h1 id="title" class="title">FreeCodeCamp Survey Form</h1>
-        <!--User Story #2-->
-        <p id="description" class="description">Please fill out this survey.</p>
-        <!--User Story #4-->
         <form id="survey-form" class="form">
-            <!--User Story #4-->
-            <div id="name" class="question">Name</div>
-            <!--User Story #5-->
-            <!--User Story #6 If I enter an email that is not formatted correctly, I will see an HTML5 validation error. -->
-            <!--User Story #10-->
-            <!--User Story #11-->
-            <inputs id="name-label"></inputs>
-            <div id="email" class="question">Email</div>
-            <!--User Story #7-->
-            <!--User Story #8 If I enter non-numbers in the number input, I will see an HTML5 validation error.-->
-            <!--User Story #9 If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.-->
-            <!--User Story #10-->
-            <!--User Story #11-->
-            <inputs id="email-label"></inputs>
-            <div id="number" class="question">Number</div>
-            <!--User Story #10-->
-            <!--User Story #11-->
-            <inputs id="number-label"></inputs>
+            <div id="name" class="group">
+                <label id=" name-label" class="question " for="name">Name</label><br>
+                <input id="name" type="text" placeholder="Enter your Name" required>
+                </input>
+            </div>
+            <div id="email" class="group">
+                <label id="email" id="email-label" class="question" for="email">Email</label><br>
+                <!--User Story #9 If I enter numbers outside the range of the number input, which are defined by the min and max attributes, Iidation error.-->
+                <input id="email" type="email" placeholder="Enter your Email" required for="email">
+                </input>
+            </div>
+            <div id="number" class="group">
+                <label id="number" id="number-label" class="question">Number</label><br>
+                <input id="number" type="tel " required placeholder="Enter your Phone Number" id="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required for="number">
+                </input>
+            </div>
+            <div class="group">
+                <label id="age" id="number" class="question " min=10 max=99>Age</label><br>
+                <input type="text" placeholder="Age" required for="age">
+                </input>
+            </div>
+            <div class="group">
+                <p class="question">
+                    Which option best describes your current role?
+                </p>
+                <select id="most-like" name="mostLike" class="drop-down" required>
+            <option disabled selected value>Select current role</option>
+            <option value="Student">Student</option>
+            <option value="Full time job">Full Time Job</option>
+            <option value="Full time learner">Full Time Learner</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+            <option value="Other">Other</option>
+            </select>
+            </div>
+            <div class="group">
+                <p class="question">
+                    Would you recommend freeCodeCamp to a friend?
+                </p>
+                <label for="recommend" id="recommend"> 
+                    <input type="radio" class="radio" name="Definitely-Maybe-Not Sure ">Definitely</br>
+                <label for="recommend" id="recommend"> 
+                    <input type="radio" class="radio" name="Definitely-Maybe-Not Sure">Maybe 
+                </label></br>
+                <label for="recommend" id="recommend"> 
+                    <input type="radio" class="radio" name="Definitely-Maybe-Not Sure">Not Sure
+                </label>
+            </div>
             <!--User Story #12-->
+            <div class="group">
+                <p class="question">
+                    What is your favorite feature of freeCodeCamp?
+                </p>
+                <select id="most-like" name="mostLike" class="drop-down" required>
+                  <option disabled selected value>Select an option</option>
+                  <option value="challenges">Challenges</option>
+                  <option value="projects">Projects</option>
+                  <option value="community">Community</option>
+                  <option value="openSource">Open Source</option>
+                </select>
+            </div>
             <!--User Story #13-->
             <!--User Story #14-->
-            <!--User Story #15-->
-            <!--User Story #16-->
+            <div class="group">
+                <p class="question"> What would you like to see improved?</p>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox" name="value">Font-end Projects
+                </label><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox" name="value">Back-end Projects
+                    </label><br>
+                <label>
+                    <input id="improve" type="checkbox" name="value">Font-end Projects
+                </label><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox" name="value">Data Visualization
+                </label><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox"
+                    name="value">Challenges
+                </label><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox"
+                    name="value">Open Source Community
+                </label class="checkbox"><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox"
+                    name="value">Gitter help rooms
+                </label><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox"
+                    name="value">Videos
+                </label><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox"
+                    name="value">City Meetups
+                </label class="checkbox"><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox"
+                    name="value">Wiki
+                </label><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox"
+                    name="value">Forum
+                </label><br>
+                <label class="checkbox">
+                    <input id="improve" type="checkbox"
+                    name="value">Additional Courses
+                </label><br>
+            </div>
+
+            <div class="group">
+                <p class="question">Any comments or suggestions?</p>
+                <textarea id="comments" class="textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+
+            <div class="button"><button type="submit" id="submit">Submit</button>
+            </div>
         </form>
     </section>
 
